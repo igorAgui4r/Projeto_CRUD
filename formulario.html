@@ -2,50 +2,41 @@
 <html>
 
     <head>
-        <!-- Metadados -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
-        <!-- CSS -->
         <link rel="stylesheet" type="text/css" href="formulario.css" media="screen">
 
-        <!-- Título da página (aparece na aba) -->
         <title>Cadastro</title>
     </head>
 
     <body>  
 
-        <!-- Cabeçalho com título e subtítulo (ambos com css de id "titulo") -->
         <div>
             <h1 id="titulo">Cadastro de Alunos</h1>
             <p id="subtitulo">Complete os campos com suas informações</p>
             <br>
         </div>
 
-        <!-- Início do formulário -->
         <form method="POST" action="cadastra_dev.php">
 
             <fieldset class="grupo">
-                <!-- Campo do nome com legenda "nome" e css de classe "campo" -->
                 <div class="campo">
                     <label for="nome"><strong>Nome</strong></label>
                     <input type="text" name="nome" id="nome" required>
                 </div>
 
-                <!-- Campo do sobrenome com legenda "sobrenome" e css de classe "campo" -->
                 <div class="campo">
                     <label for="sobrenome"><strong>Sobrenome</strong></label>
                     <input type="text" name="sobrenome" id="sobrenome" required>
                 </div>
             </fieldset> 
 
-            <!-- Campo de email com-->
             <div class="campo">
                 <label for="email"><strong>Email</strong></label>
                 <input type="email" name="email" id="email" required>
             </div>
 
-            <!-- Campo de senioridade com 3 opções para escolha (select option) e css de classe "campo" -->
             <div class="campo">
                 <label for="senioridade"><strong>Qual curso desejado</strong></label>
                 <select id="senioridade" required>
@@ -56,39 +47,37 @@
                 </select>
             </div>
 
-            <!-- Campo de desenvolvimento web com 3 opções de botões selecionáveis (radio button) e css de classe "campo" -->
             <div class="campo">
                 <label><strong>Turno</strong></label>
                 <label>
-                    <input type="radio" name="devweb" value="frontend" checked>Manhã
+                    <input type="radio" name="turno" value="manha" checked>Manhã
                 </label>
                 <label>
-                    <input type="radio" name="devweb" value="backend">Tarde
+                    <input type="radio" name="turno" value="tarde">Tarde
                 </label>
                 <label>
-                    <input type="radio" name="devweb" value="fullstack">Noite
+                    <input type="radio" name="turno" value="noite">Noite
                 </label>
             </div>
 
             
 
             <fieldset class="grupo">
-                <!-- Campo de tecnologias para escolha de 1 ou mais opções para marcar (checkbox) e css de classe "campo" -->
                 <div id="check">
                     <label><strong>Selecione os materiais extras que deseja adquirir:</strong></label><br><br>
-                    <input type="checkbox" id="tecnologia1" name="tecnologia[]" value="HTML">
+                    <input type="checkbox" id="material1" name="material[]" value="apostila">
                     <label for="tecnologia1"> Apostilas exclusivas</label>
                     <br>
-                    <input type="checkbox" id="tecnologia2" name="tecnologia[]" value="CSS">
+                    <input type="checkbox" id="material2" name="material[]" value="simulado">
                     <label for="tecnologia2"> Provas e Simulados</label>
                     <br>
-                    <input type="checkbox" id="tecnologia3" name="tecnologia[]" value="JavaScript">
+                    <input type="checkbox" id="material3" name="material[]" value="exercicio">
                     <label for="tecnologia3"> Exercícios direcionados</label>
                     <br>
-                    <input type="checkbox" id="tecnologia4" name="tecnologia[]" value="PHP">
+                    <input type="checkbox" id="material4" name="material[]" value="videoaula">
                     <label for="tecnologia4"> Videoaulas</label>
                     <br>
-                    <input type="checkbox" id="tecnologia5" name="tecnologia[]" value="C#">
+                    <input type="checkbox" id="material5" name="material[]" value="uniforme">
                     <label for="tecnologia5"> Uniforme do curso</label>
                 </div>
             </fieldset>
@@ -96,8 +85,8 @@
             <!-- Caixa de texto -->
             <div class="campo">
                 <br>
-                <label for="experiencia"><strong>Observações: </strong></label>
-                <textarea rows="6" style="width: 26em" id="experiencia" name="experiencia"></textarea>
+                <label for="obs"><strong>Observações: </strong></label>
+                <textarea rows="6" style="width: 26em" id="obs" name="obs"></textarea>
             </div>
 
             <!-- Botão para enviar o formulário -->
@@ -108,7 +97,6 @@
     </body>
 
 </html>
-
 
 
 
